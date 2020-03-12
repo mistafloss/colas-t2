@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/add-post', 'HomeController@addPost')->name('addPost');
+

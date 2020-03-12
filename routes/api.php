@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('post', 'PostController');
+
+//this route below does not actually exist. I have only used it here to demonstrate how I would use the checkheader middleware on the route
+//Route::post('api/check-header', array('uses' => 'APIController@checkheader','middleware' => ['checkHeader']));
